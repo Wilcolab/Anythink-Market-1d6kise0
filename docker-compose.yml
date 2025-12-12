@@ -9,10 +9,10 @@ services:
       - ./python-server/src:/app/src
   node-server:
     build:
-      context: ./my-express-server
+      context: ./node-server
       dockerfile: Dockerfile
     ports:
       - 8001:8001
     volumes:
-      - ./my-express-server:/app
+      - ./node-server:/app
       - /app/node_modules
